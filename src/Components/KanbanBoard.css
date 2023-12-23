@@ -1,0 +1,92 @@
+/* Add or update your CSS styles */
+.kanban-board {
+  display: flex;
+  background-color: #f1f4f7; /* Slightly blue and greyish background color */
+  padding: 20px; /* Add some padding for a better visual appearance */
+}
+
+.kanban-list {
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+  margin-bottom: 10px; /* Adjust as needed for spacing between lists */
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-icon {
+  display: inline-block; /* Use inline-block or flexbox as needed */
+  font-size: 1.5rem; /* Adjust as desired */
+  text-transform: uppercase; /* Make initials uppercase */
+  font-weight: bold; /* Optional: make initials bold */
+  border-radius: 50%; /* Optional: make icon circular */
+  background-color: #ccc; /* Optional: add background color */
+  color: #333; /* Optional: adjust text color */
+  padding: 0.25rem; /* Optional: adjust spacing */
+  margin-right: 0.5rem; /* Optional: add spacing between icon and h2 */
+}
+
+.kanban-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-column {
+  /* Add any additional styling for individual columns */
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.expanding-box {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+}
+
+.expanding-box.expanded {
+  max-height: 1000px; /* Adjust the height as needed */
+}
+.kanban-column h2 {
+  font-family: 'Georgia', serif; /* Use Georgia font for h2 elements */
+  font-size: 20px;
+  margin-bottom: 8px;
+  /* font-weight: bold; Make it slightly bold */
+  margin-right: 16px; 
+  margin-left: 13px; 
+}
+/* Additional styles for a more polished look */
+.kanban-column h3 {
+  font-family: 'Georgia', serif;
+  margin-bottom: 8px;
+  font-size: 16px;
+  /* font-weight: bold; Make it slightly bold */
+  margin-right: 8px; 
+}
+
+.kanban-list p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.button1 {
+  padding-left: 10px;
+  border: 2px solid #f1f2f2; /* Highlight the border with a blue color */
+  border-radius: 8px; /* Add curved edges */
+  padding: 8px 16px; /* Add padding for a better visual appearance */
+  cursor: pointer; /* Add pointer cursor for interaction */
+}
+
+/* Add more styles as needed */
+/* Add or update your CSS styles */
+.flex-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+}
+
+.button {
+  margin-left: auto;
+  margin-right: 20px; /* Push the buttons to the right end */
+}
+
+/* Add more styles as needed */
