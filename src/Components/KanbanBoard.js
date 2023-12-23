@@ -59,6 +59,7 @@ const KanbanBoard = ({ tickets, users }) => {
     const body = document.body;
     const kanbanBoard = document.querySelector(".kanban-board");
     const tickets = document.querySelectorAll(".kanban-list");
+    const optionsBox = document.querySelector(".options-box");
 
     if (nightMode) {
       body.style.backgroundColor = "#1a1a1a"; // Dark background color
@@ -67,7 +68,9 @@ const KanbanBoard = ({ tickets, users }) => {
       if (kanbanBoard) {
         kanbanBoard.style.backgroundColor = "#1a1a1a"; // Dark background color for kanban board
       }
-
+      if (optionsBox) {
+        optionsBox.classList.add("dark-mode"); // Apply dark mode styles to the dropdown
+      }
       // if (tickets) {
       //   tickets.forEach((ticket) => {
       //     ticket.style.backgroundColor = "#2a2a2a"; // Dark background color for tickets
@@ -82,6 +85,9 @@ const KanbanBoard = ({ tickets, users }) => {
         kanbanBoard.style.backgroundColor = "#f1f4f7"; // Default background color for kanban board
       }
 
+      if (optionsBox) {
+        optionsBox.classList.remove("dark-mode"); // Remove dark mode styles from the dropdown
+      }
       // if (tickets) {
       //   tickets.forEach((ticket) => {
       //     ticket.style.backgroundColor = "#ffffff"; // Default background color for tickets
@@ -255,7 +261,13 @@ const KanbanBoard = ({ tickets, users }) => {
       </div>
 
       {isDisplayOptionsVisible && (
-        <div className="options-box absolute border p-2 mt-2 bg-white">
+        <div
+          className="options-box absolute border p-2 mt-2 bg-white"
+          style={{
+            backgroundColor: nightMode ? "#2a2a2a" : "#ffffff",
+            color: nightMode ? "#ffffff" : "#000000",
+          }}
+        >
           <div className="grouping-options mb-2">
             <label className="mr-2" htmlFor="groupingDropdown">
               Group by:
@@ -265,6 +277,10 @@ const KanbanBoard = ({ tickets, users }) => {
                 id="groupingDropdown"
                 value={groupingOption}
                 onChange={(e) => setGroupingOption(e.target.value)}
+                style={{
+                  backgroundColor: nightMode ? "#2a2a2a" : "#ffffff",
+                  color: nightMode ? "#ffffff" : "#000000",
+                }}
               >
                 <option value="status">Status</option>
                 <option value="user">User</option>
@@ -282,6 +298,10 @@ const KanbanBoard = ({ tickets, users }) => {
                 id="sortingDropdown"
                 value={sortingOption}
                 onChange={(e) => setSortingOption(e.target.value)}
+                style={{
+                  backgroundColor: nightMode ? "#2a2a2a" : "#ffffff",
+                  color: nightMode ? "#ffffff" : "#000000",
+                }}
               >
                 <option value="none">None</option>
                 <option value="priority">Priority</option>
